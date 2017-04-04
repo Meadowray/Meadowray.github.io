@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>All About Spelling Level 1</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<style>
+	.draggable { width: 90px; height: 80px; padding: 5px; float: left; margin: 0 10px 10px 0; font-size: .9em; }
+  .vowel { backgrownd-color: red; }
+  .consonant { backgrownd-color: #44a1ed; }
+	.ui-widget-header p, .ui-widget-content p { margin: 0; }
+	</style>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	$( function() {
+		$( "#draggable" ).draggable({ snap: true });
+	} );
+	</script>
+</head>
+<body>
+
+<br style="clear:both">
+
+<div id="draggable" class="draggable ui-widget-content vowel">
+	<p>a</p>
+</div>
+<div id="draggable" class="draggable ui-widget-content consonant">
+	<p>b</p>
+</div>
+<div id="draggable" class="draggable ui-widget-content consonant">
+	<p>c</p>
+</div>
+<div id="draggable" class="draggable ui-widget-content consonant">
+	<p>d</p>
+</div>
+<div id="draggable" class="draggable ui-widget-content vowel">
+	<p>e</p>
+</div>
+<div id="draggable" class="draggable ui-widget-content consonant">
+	<p>f</p>
+</div>
+<div id="draggable" class="draggable ui-widget-content consonant">
+	<p>g</p>
+</div>
+<div id="draggable" class="draggable ui-widget-content consonant">
+	<p>h</p>
+</div>
+
+</body>
+</html>
