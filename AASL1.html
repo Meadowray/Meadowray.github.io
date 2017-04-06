@@ -9,7 +9,7 @@
 	.draggable { width: 35px; height: 35px; padding: 4px; float: left; margin: 0 3px 3px 0; font-size: 20pt; text-align: center; font-weight: bold; }
   .vowel { background-color: #ff2828; }
   .consonant { background-color: #44a1ed; }
-#teams { background-color: #9ee6ff; display: inline-block; }
+#cteams { background-color: #9ee6ff; display: inline-block; }
 .next-line { clear: left; }
 header { font-weight: bold; font-size: 15pt; text-align: center; }
 	.ui-widget-header p, .ui-widget-content p { margin: 0; }
@@ -20,8 +20,9 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	<script>
 	$( function() {
 		$( ".draggable" ).draggable({ snap: true });
+		$( ".teams" ).draggable({ snap: false });
                 //Slide up and down on click
-                $("#teams > header").click(function(){
+                $(".teams > header").click(function(){
                     $(this).toggleClass('inactive');
                     $(this).next().slideToggle("slow");
                 });
@@ -196,7 +197,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	<div class="next-line"> </div>
 	
 	
-	<div id="teams">
+	<div id="cteams" class="teams">
 		<header>Consonant Teams
 	</header>
 	<section>
