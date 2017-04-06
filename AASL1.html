@@ -21,7 +21,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	$( function() {
 		$( ".draggable" ).draggable({ snap: true });
                 //Slide up and down on click
-                $("#teams").click(function(){
+                $("#teams > header").click(function(){
                     $(this).toggleClass('inactive');
                     $(this).next().slideToggle("slow");
                 });
