@@ -22,7 +22,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 		$( ".draggable" ).draggable({ snap: true });
 		$( ".teams" ).draggable({ snap: false });
                 //Slide up and down on click
-                $(".teams > header").click(function(){
+                $(".teams > header").on('click touchstart', function () {
                     $(this).toggleClass('inactive');
                     $(this).next().slideToggle("slow");
                 });
