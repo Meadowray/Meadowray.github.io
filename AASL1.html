@@ -21,10 +21,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	$( function() {
 		$( ".draggable" ).draggable({
 			snap: true,
-			start: function() {
-				$( this ).clone().insertAfter( this );
-				$( this ).appendTo( document.body );
-			}
+			helper: "clone"
 		});
 		
 		$( ".teams" ).draggable({ snap: false });
