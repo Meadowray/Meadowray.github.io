@@ -19,7 +19,14 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	<script src="jquery.ui.touch-punch.js"></script>
 	<script>
 	$( function() {
-		$( ".draggable" ).draggable({ snap: true });
+		$( ".draggable" ).draggable({
+			snap: true,
+			start: function() {
+				$( this ).clone().insertAfter( this );
+				$( this ).appendTo( document.body );
+			}
+		});
+		
 		$( ".teams" ).draggable({ snap: false });
                 //Slide up and down on click
                 $(".teams > header").on('click touchstart', function () {
