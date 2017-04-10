@@ -20,8 +20,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	<script>
 	$( function() {
 		$( ".draggable" ).draggable({
-			snap: true,
-			helper: function() { return $(this).clone().draggable({snap: true}).appendTo(document.body); }
+			snap: true
 		});
 		
 		$( ".teams" ).draggable({ snap: false });
