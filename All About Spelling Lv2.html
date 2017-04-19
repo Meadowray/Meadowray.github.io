@@ -13,13 +13,14 @@
   .tiles  { background-color: #ffa75b; }
   .other  { background-color: #fff15b; }
   .teams { max-width: 289px; margin: 3px 0px 1px 3px; }
+	.hider { float: right; padding: 1px 5px 1px 5px; font-size: 15pt; font-weight: bold; border-style: outset; width: 1ex; }
 #cteams { background-color: #9ee6ff; display: inline-block; }
 #vteams { background-color: #ff9e9e; display: inline-block; }
 #erSounds { background-color: #d39eff; display: inline-block; }
 #otherTiles { background-color: #ffbe75; display: inline-block; }
 		#otherTiles, #erSounds, #vteams, #cteams { float: left; clear: left }
 .next-line { clear: left; }
-header { font-weight: bold; font-size: 15pt; text-align: center; }
+header { font-weight: bold; font-size: 15pt; text-align: center; padding: 4px 0px 4px 1px; white-space: nowrap; margin-right: 5ex; }
 	.ui-widget-header p, .ui-widget-content p { margin: 0; }
 	</style>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -30,7 +31,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 		$( ".draggable" ).draggable({
 			snap: true
 		});
-		
+
 		$( ".teams" ).draggable({ snap: false });
                 //Slide up and down on click
                 $(".teams > header").on('click touchstart', function () {
@@ -123,7 +124,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	<p>z</p>
 </div>
 	<div class="next-line"> </div>
-	
+
 <div id="a" class="draggable ui-widget-content vowel">
 	<p>a</p>
 </div>
@@ -202,12 +203,12 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 <div id="z" class="draggable ui-widget-content consonant">
 	<p>z</p>
 </div>
-	
-	
-	
+
+
+
 	<div class="next-line"> </div>
-	
-	
+
+
 	<div id="cteams" class="teams">
 		<header>Consonant Teams
 	</header>
@@ -233,21 +234,21 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 		<div class="draggable ui-widget-content consonant">
 	<p> </p>
 </div>
-		
+
 		<div class="next-line"> </div>
-	
-	
+
+
 		</section>
-	
+
 	</div>
-	
-  
-  
+
+
+
   <div id="vteams" class="teams">
 		<header>Vowel Teams
 	</header>
 	<section style="display:block;">
-  
+
 		<div class="draggable ui-widget-content vowel">
 	<p>au</p>
 </div>
@@ -259,33 +260,33 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 </div>
 		<div class="draggable ui-widget-content vowel">
 	<p>oi</p>
-</div>		
+</div>
 		<div class="draggable ui-widget-content vowel">
 	<p>ou</p>
 </div>
 		<div class="draggable ui-widget-content vowel">
 	<p>ow</p>
-</div>		
+</div>
 		<div class="draggable ui-widget-content vowel">
 	<p>oy</p>
 </div>
 		<div class="draggable ui-widget-content vowel">
 	<p> </p>
 </div>
-		
+
 		<div class="next-line"> </div>
-	
-	
+
+
 		</section>
-	
+
 	</div>
-  
-  
+
+
     <div id="erSounds" class="teams">
 		<header>The Sounds of / er /
 	</header>
 	<section style="display:block;">
-  
+
 		<div class="draggable ui-widget-content erSound">
 	<p>er</p>
 </div>
@@ -293,24 +294,24 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	<p> </p>
 </div>
 
-		
+
 		<div class="next-line"> </div>
-	
-	
+
+
 		</section>
-	
+
 	</div>
 
 
-  
+
    <div id="otherTiles" class="teams">
 		<header> Other Tiles
 	</header>
 	<section style="display:block;">
-  
+
 		<div class="draggable ui-widget-content other">
 	<p>ar</p>
-</div>		
+</div>
 		<div class="draggable ui-widget-content other">
 	<p>or</p>
 </div>
@@ -320,17 +321,17 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 
 
 
-		
+
 		<div class="next-line"> </div>
-	
-	
+
+
 		</section>
-	
+
 	</div>
-  
-  
-  
-	
-	
+
+
+
+
+
 </body>
 </html>

@@ -7,13 +7,13 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<style>
 	.draggable {
-  min-width: 35px; 
-  height: 35px; 
-  padding: 4px; 
-  float: left; 
+  min-width: 35px;
+  height: 35px;
+  padding: 4px;
+  float: left;
   margin: 3px 0px 1px 3px;
-  font-size: 20pt; 
-  text-align: center; 
+  font-size: 20pt;
+  text-align: center;
   font-weight: bold;
   }
   .vowel { background-color: #ff2828; }
@@ -23,6 +23,7 @@
   .other  { background-color: #fff15b; }
   .suffixes { background-color: #ff35a0; }
   .teams { max-width: 289px; margin: 3px 0px 1px 3px; }
+	.hider { float: right; padding: 1px 5px 1px 5px; font-size: 15pt; font-weight: bold; border-style: outset; width: 1ex; }
 #cteams { background-color: #9ee6ff; display: inline-block; }
 #vteams { background-color: #ff9e9e; display: inline-block; }
 #erSounds { background-color: #d39eff; display: inline-block; }
@@ -32,7 +33,7 @@
 		#csuffixes, #vsuffixes { float: right; clear: right }
 		#otherTiles, #erSounds, #vteams, #cteams { float: left; clear: left }
 .next-line { clear: left; }
-header { font-weight: bold; font-size: 15pt; text-align: center; }
+header { font-weight: bold; font-size: 15pt; text-align: center; padding: 4px 0px 4px 1px; white-space: nowrap; margin-right: 5ex; }
 	.ui-widget-header p, .ui-widget-content p { margin: 0; }
 	</style>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -43,13 +44,15 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 		$( ".draggable" ).draggable({
 			snap: true
 		});
-		
+		$(".teams").prepend("<div class='hider'>-</div>");
 		$( ".teams" ).draggable({ snap: false });
-                //Slide up and down on click
-                $(".teams > header").on('click touchstart', function () {
-                    $(this).toggleClass('inactive');
-                    $(this).next().slideToggle("slow");
-                });
+    //Slide up and down on click
+    $(".hider").on('click touchstart', function () {
+        $(this).toggleClass('inactive');
+				var newText = $(this).text()=='+'?'-':'+';
+				$(this).text(newText);
+        $(this).siblings('section').slideToggle("slow");
+    });
 	} );
 	</script>
 </head>
@@ -136,7 +139,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	<p>z</p>
 </div>
 	<div class="next-line"> </div>
-	
+
 <div id="a" class="draggable ui-widget-content vowel">
 	<p>a</p>
 </div>
@@ -215,21 +218,21 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 <div id="z" class="draggable ui-widget-content consonant">
 	<p>z</p>
 </div>
-	
-	
-	<div class="next-line"> </div>
-	
-	
 
-	
+
+	<div class="next-line"> </div>
+
+
+
+
 	   <div id="csuffixes" class="teams">
 		<header> Consonant Suffixes
 	</header>
 	<section style="display:block;">
-  
+
 		<div class="draggable ui-widget-content suffixes">
 	<p>est</p>
-</div>	
+</div>
 		<div class="draggable ui-widget-content suffixes">
 	<p>ful</p>
 </div>
@@ -238,7 +241,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 </div>
 		<div class="draggable ui-widget-content suffixes">
 	<p>less</p>
-</div>	
+</div>
 		<div class="draggable ui-widget-content suffixes">
 	<p>ment</p>
 </div>
@@ -252,20 +255,20 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	<p> </p>
 </div>
 
-		
 
-	
-	
+
+
+
 		</section>
-	
+
 	</div>
- 
- 
- 
- 
-    	
-	
-	
+
+
+
+
+
+
+
 	<div id="cteams" class="teams">
 		<header>Consonant Teams
 	</header>
@@ -292,22 +295,22 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	<p> </p>
 </div>
 
-	
-	
-		</section>
-	
-	</div>
-	
 
-  
+
+		</section>
+
+	</div>
+
+
+
 <div id="vsuffixes" class="teams">
 		<header> Vowel Suffixes
 	</header>
 	<section style="display:block;">
-  
+
 		<div class="draggable ui-widget-content suffixes">
 	<p>ed</p>
-</div>	
+</div>
 		<div class="draggable ui-widget-content suffixes">
 	<p>er</p>
 </div>
@@ -316,7 +319,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 </div>
 		<div class="draggable ui-widget-content suffixes">
 	<p>ing</p>
-</div>	
+</div>
 		<div class="draggable ui-widget-content suffixes">
 	<p>ly</p>
 </div>
@@ -325,22 +328,22 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 </div>
 
 
-		
-	
-	
+
+
+
 		</section>
-	
-	</div>	
-	
-	
-	
-	
-  
+
+	</div>
+
+
+
+
+
   <div id="vteams" class="teams">
 		<header>Vowel Teams
 	</header>
 	<section style="display:block;">
-  
+
 		<div class="draggable ui-widget-content vowel">
 	<p>ai</p>
 </div>
@@ -358,47 +361,47 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 </div>
 		<div class="draggable ui-widget-content vowel">
 	<p>ey</p>
-</div>	
+</div>
 		<div class="draggable ui-widget-content vowel">
 	<p>igh</p>
-</div>	
+</div>
 		<div class="draggable ui-widget-content vowel">
 	<p>oa</p>
-</div>	
+</div>
 		<div class="draggable ui-widget-content vowel">
 	<p>oi</p>
-</div>	
+</div>
 		<div class="draggable ui-widget-content vowel">
 	<p>oo</p>
-</div>		
+</div>
 		<div class="draggable ui-widget-content vowel">
 	<p>ou</p>
 </div>
 		<div class="draggable ui-widget-content vowel">
 	<p>ow</p>
-</div>		
+</div>
 		<div class="draggable ui-widget-content vowel">
 	<p>oy</p>
 </div>
 		<div class="draggable ui-widget-content vowel">
 	<p> </p>
 </div>
-		
 
-	
-	
+
+
+
 		</section>
-	
-	</div>
-	
 
-  
-  
+	</div>
+
+
+
+
     <div id="erSounds" class="teams">
 		<header>The Sounds of / er /
 	</header>
 	<section style="display:block;">
-  
+
 		<div class="draggable ui-widget-content erSound">
 	<p>er</p>
 </div>
@@ -413,26 +416,26 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 </div>
 
 
-		
 
-	
-	
+
+
+
 		</section>
-	
+
 	</div>
-	
 
 
 
-  
+
+
    <div id="otherTiles" class="teams">
 		<header> Other Tiles
 	</header>
 	<section style="display:block;">
-  
+
 		<div class="draggable ui-widget-content other">
 	<p>ar</p>
-</div>	
+</div>
 		<div class="draggable ui-widget-content tiles">
 	<p>ed</p>
 </div>
@@ -446,24 +449,23 @@ header { font-weight: bold; font-size: 15pt; text-align: center; }
 	<p> </p>
 </div>
 
-		
 
-	
-	
+
+
+
 		</section>
-	
+
 	</div>
-	
 
-  
-  
-  
 
- 
-  
-  
-	
-	
+
+
+
+
+
+
+
+
+
 </body>
 </html>
-
