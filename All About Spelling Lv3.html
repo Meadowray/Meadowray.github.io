@@ -47,7 +47,7 @@ header { font-weight: bold; font-size: 15pt; text-align: center; padding: 4px 0p
 		$(".teams").prepend("<div class='hider'>-</div>");
 		$( ".teams" ).draggable({ snap: false });
     //Slide up and down on click
-    $(".hider").on('click taphold', function () {
+    $(".hider").on('click touchstart', function () {
         $(this).toggleClass('inactive');
 				var newText = $(this).text()=='+'?'-':'+';
 				$(this).text(newText);
