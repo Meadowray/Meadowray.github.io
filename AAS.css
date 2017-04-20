@@ -15,6 +15,8 @@ font-weight: bold;
 .other  { background-color: #fff15b; }
 .suffixes { background-color: #ff35a0; }
 .teams { max-width: 289px; margin: 3px 0px 1px 3px; }
+.prefixes { background-color: #FFEBCD; }
+.shSound { background-color: #0f9b26; }
 .hider { float: right; padding: 1px 5px 1px 5px; font-size: 15pt; font-weight: bold; border-style: outset; width: 1ex; }
 #cteams { background-color: #9ee6ff; display: inline-block; }
 #vteams { background-color: #ff9e9e; display: inline-block; }
@@ -22,7 +24,9 @@ font-weight: bold;
 #otherTiles { background-color: #ffbe75; display: inline-block; }
 #csuffixes { background-color: #ff75e8; display: inline-block; }
 #vsuffixes { background-color: #ff75e8; display: inline-block; }
-  #csuffixes, #vsuffixes { float: right; clear: right }
+#prefixes { background-color: #FFF8DC; display: inline-block; }
+#shSound { background-color: #67e07b; display: inline-block; }
+  #csuffixes, #vsuffixes, #prefixes, #shSound { float: right; clear: right }
   #otherTiles, #erSounds, #vteams, #cteams { float: left; clear: left }
 .next-line { clear: left; }
 header { font-weight: bold; font-size: 15pt; text-align: center; padding: 4px 0px 4px 1px; white-space: nowrap; margin-right: 5ex; }
