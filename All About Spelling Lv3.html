@@ -5,217 +5,172 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>All About Spelling Level 1</title>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<style>
-	.draggable {
-  min-width: 35px;
-  height: 35px;
-  padding: 4px;
-  float: left;
-  margin: 3px 0px 1px 3px;
-  font-size: 20pt;
-  text-align: center;
-  font-weight: bold;
-  }
-  .vowel { background-color: #ff2828; }
-  .consonant { background-color: #44a1ed; }
-  .erSound { background-color: #b669f4; }
-  .tiles  { background-color: #ffa75b; }
-  .other  { background-color: #fff15b; }
-  .suffixes { background-color: #ff35a0; }
-  .teams { max-width: 289px; margin: 3px 0px 1px 3px; }
-	.hider { float: right; padding: 1px 5px 1px 5px; font-size: 15pt; font-weight: bold; border-style: outset; width: 1ex; }
-#cteams { background-color: #9ee6ff; display: inline-block; }
-#vteams { background-color: #ff9e9e; display: inline-block; }
-#erSounds { background-color: #d39eff; display: inline-block; }
-#otherTiles { background-color: #ffbe75; display: inline-block; }
-#csuffixes { background-color: #ff75e8; display: inline-block; }
-#vsuffixes { background-color: #ff75e8; display: inline-block; }
-		#csuffixes, #vsuffixes { float: right; clear: right }
-		#otherTiles, #erSounds, #vteams, #cteams { float: left; clear: left }
-.next-line { clear: left; }
-header { font-weight: bold; font-size: 15pt; text-align: center; padding: 4px 0px 4px 1px; white-space: nowrap; margin-right: 5ex; }
-	.ui-widget-header p, .ui-widget-content p { margin: 0; }
-	</style>
+	<link rel="stylesheet" href="AAS.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="jquery.ui.touch-punch.js"></script>
-	<script>
-	$( function() {
-		$( ".draggable" ).draggable({
-			snap: true
-		});
-		$(".teams").prepend("<div class='hider'>-</div>");
-		$( ".teams" ).draggable({ snap: false });
-    //Slide up and down on click
-    $(".hider").on('click touchstart', function () {
-        $(this).toggleClass('inactive');
-				var newText = $(this).text()=='+'?'-':'+';
-				$(this).text(newText);
-        $(this).siblings('section').slideToggle("slow");
-    });
-	} );
-	</script>
+	<script src="AAS.js"></script>
 </head>
 <body>
 
 <br style="clear:both">
 
-<div id="a" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>a</p>
 </div>
-<div id="b" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>b</p>
 </div>
-<div id="c" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>c</p>
 </div>
-<div id="d" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>d</p>
 </div>
-<div id="e" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>e</p>
 </div>
-<div id="f" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>f</p>
 </div>
-<div id="g" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>g</p>
 </div>
-<div id="h" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>h</p>
 </div>
-<div id="i" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>i</p>
 </div>
-<div id="j" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>j</p>
 </div>
-<div id="k" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>k</p>
 </div>
-<div id="l" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>l</p>
 </div>
-<div id="m" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>m</p>
 </div>
-<div id="n" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>n</p>
 </div>
-<div id="o" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>o</p>
 </div>
-<div id="p" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>p</p>
 </div>
-<div id="q" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>q</p>
 </div>
-<div id="r" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>r</p>
 </div>
-<div id="s" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>s</p>
 </div>
-<div id="t" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>t</p>
 </div>
-<div id="u" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>u</p>
 </div>
-<div id="v" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>v</p>
 </div>
-<div id="w" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>w</p>
 </div>
-<div id="x" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>x</p>
 </div>
-<div id="y" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>y</p>
 </div>
-<div id="z" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>z</p>
 </div>
 	<div class="next-line"> </div>
 
-<div id="a" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>a</p>
 </div>
-<div id="b" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>b</p>
 </div>
-<div id="c" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>c</p>
 </div>
-<div id="d" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>d</p>
 </div>
-<div id="e" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>e</p>
 </div>
-<div id="f" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>f</p>
 </div>
-<div id="g" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>g</p>
 </div>
-<div id="h" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>h</p>
 </div>
-<div id="i" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>i</p>
 </div>
-<div id="j" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>j</p>
 </div>
-<div id="k" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>k</p>
 </div>
-<div id="l" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>l</p>
 </div>
-<div id="m" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>m</p>
 </div>
-<div id="n" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>n</p>
 </div>
-<div id="o" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>o</p>
 </div>
-<div id="p" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>p</p>
 </div>
-<div id="q" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>q</p>
 </div>
-<div id="r" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>r</p>
 </div>
-<div id="s" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>s</p>
 </div>
-<div id="t" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>t</p>
 </div>
-<div id="u" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>u</p>
 </div>
-<div id="v" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>v</p>
 </div>
-<div id="w" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>w</p>
 </div>
-<div id="x" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>x</p>
 </div>
-<div id="y" class="draggable ui-widget-content vowel">
+<div class="draggable ui-widget-content vowel">
 	<p>y</p>
 </div>
-<div id="z" class="draggable ui-widget-content consonant">
+<div class="draggable ui-widget-content consonant">
 	<p>z</p>
 </div>
 
@@ -273,6 +228,9 @@ header { font-weight: bold; font-size: 15pt; text-align: center; padding: 4px 0p
 		<header>Consonant Teams
 	</header>
 	<section style="display:block;">
+		<div class="draggable ui-widget-content consonant">
+		<p>ch</p>
+	</div>
 			<div class="draggable ui-widget-content consonant">
 	<p>ck</p>
 </div>

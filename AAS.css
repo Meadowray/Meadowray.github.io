@@ -1,0 +1,29 @@
+.draggable {
+min-width: 35px;
+height: 35px;
+padding: 4px;
+float: left;
+margin: 3px 0px 1px 3px;
+font-size: 20pt;
+text-align: center;
+font-weight: bold;
+}
+.vowel { background-color: #ff2828; }
+.consonant { background-color: #44a1ed; }
+.erSound { background-color: #b669f4; }
+.tiles  { background-color: #ffa75b; }
+.other  { background-color: #fff15b; }
+.suffixes { background-color: #ff35a0; }
+.teams { max-width: 289px; margin: 3px 0px 1px 3px; }
+.hider { float: right; padding: 1px 5px 1px 5px; font-size: 15pt; font-weight: bold; border-style: outset; width: 1ex; }
+#cteams { background-color: #9ee6ff; display: inline-block; }
+#vteams { background-color: #ff9e9e; display: inline-block; }
+#erSounds { background-color: #d39eff; display: inline-block; }
+#otherTiles { background-color: #ffbe75; display: inline-block; }
+#csuffixes { background-color: #ff75e8; display: inline-block; }
+#vsuffixes { background-color: #ff75e8; display: inline-block; }
+  #csuffixes, #vsuffixes { float: right; clear: right }
+  #otherTiles, #erSounds, #vteams, #cteams { float: left; clear: left }
+.next-line { clear: left; }
+header { font-weight: bold; font-size: 15pt; text-align: center; padding: 4px 0px 4px 1px; white-space: nowrap; margin-right: 5ex; }
+.ui-widget-header p, .ui-widget-content p { margin: 0; }
