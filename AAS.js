@@ -5,7 +5,7 @@ $( function() {
   $(".teams").prepend("<div class='hider'>-</div>");
   $( ".teams" ).draggable({ snap: false });
   //Slide up and down on click
-  $(".hider").on('click touchstart', function () {
+  $(".hider").on('click', function () {
       $(this).toggleClass('inactive');
       var newText = $(this).text()=='+'?'-':'+';
       $(this).text(newText);
